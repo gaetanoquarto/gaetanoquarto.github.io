@@ -1,0 +1,114 @@
+a {
+  text-decoration: none;
+  color: #2e2e2e;
+
+  &:hover {
+    color: #F96E46;
+  }
+}
+#banner {
+  background: url('https://i.imgur.com/PFCbrNd.png');
+  filter: brightness(0.8);
+  background-position: center;
+  background-size: cover;
+  // background-color: #F96E46;
+  max-height: 100vh;
+}
+
+#lastPS {
+  min-height: 300px;
+  max-height: 300px;
+  filter: grayscale(90%);
+  transition: all 0.5s ease-out;
+
+  &:hover {
+    filter: grayscale(0%);
+  }
+}
+
+img {
+  transition: all 0.5s ease-out;
+
+  &:hover {
+    filter: grayscale(90%);
+  }
+}
+
+@media screen and (max-width: 991px) {
+  #cardSmall {
+    display: none;
+  }
+
+  #banner {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 991px) {
+  #cardLarge {
+    display: none;
+  }
+}
+
+// Sezione Prossime Uscite
+#newGamePS {
+  background-color: #2e2e2e;
+  border: 3px solid white;
+  outline: 3px solid #2e2e2e;
+  color: white;
+}
+
+@media screen and (max-width: 991px) {
+  #gamePS1,
+  #gamePS2,
+  #gamePS3 {
+    max-height: 100px;
+    max-width: 200px;
+  }
+
+  h5 {
+    font-size: 12px;
+  }
+
+  #psArticle {
+    padding: 0;
+    margin-top: -6px;
+  }
+}
+
+#gamePS1 {
+  background-image: url('https://sm.ign.com/t/ign_it/screenshot/default/the-binding-of-isaac-afterbirth_8mwq.1280.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  border: 1px solid black;
+  margin-bottom: 5px;
+}
+
+#gamePS2 {
+  background-image: url('https://media-assets.wired.it/photos/622711425fb802e91b105e90/3:2/w_1050,h_700,c_limit/god-war-analisis.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  border: 1px solid black;
+  margin-bottom: 5px;
+}
+
+#gamePS3 {
+  background-image: url('https://sm.ign.com/ign_it/screenshot/default/the-last-of-us-naughty-dog-playstation-4_xb6r.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  border: 1px solid black;
+  margin-bottom: 5px;
+}
+
+.cardBG {
+  background-color: #2e2e2e;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.cardBG2 {
+  background-color: #F96E46;
+  width: auto;
+  padding: 2px;
+  font-size: 12px;
+}

@@ -1,0 +1,23 @@
+a {
+  text-decoration: none;
+}
+
+#last {
+  min-height: 500px;
+  max-height: 500px;
+  transition: all 0.5s ease-out;
+}
+
+#last:hover {
+  filter: grayscale(90%);
+}
+
+#fourPosts {
+  min-height: 250px;
+  max-height: 250px;
+  transition: all 0.5s ease-out;
+}
+
+#fourPosts:hover {
+  filter: grayscale(90%);
+}

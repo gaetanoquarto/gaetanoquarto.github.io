@@ -1,0 +1,15 @@
+#container-img {
+  background-image: url('https://signal.avg.com/hubfs/Blog_Content/Avg/Signal/AVG%20Signal%20Images/9%20Ways%20to%20Boost%20Your%20Gaming%20Rig/How_to_Improve_Your_Gaming_PC_Performance-Hero.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 100vh;
+}
+
+.card img {
+  transition: transform 0.3s ease-in-out;
+  &:hover {
+      transform: translateX(5px);
+  }
+}

@@ -1,0 +1,38 @@
+<app-navbar></app-navbar>
+
+<div id="container-img"></div>
+
+<div class="container my-5">
+    <div class="d-flex justify-content-center align-items-center mb-5">
+        <h1 class="me-3">NINTENDO</h1>
+        <div style="width: 1000px; border-bottom: 5px solid #545863;"></div>
+    </div>
+
+    <div *ngFor="let post of posts! | paginate:{itemsPerPage: 5, currentPage: page}" class="card border-0 border-bottom mb-4">
+        <div class="row g-0">
+            <div class="col-md-4">
+                <img src="{{post.image}}" class="img-fluid" alt="Photo card">
+            </div>
+            <div class="col-md-8">
+                <div class="card-body">
+                    <h5 class="card-title">{{post.title}}</h5>
+                    <p class="card-text">{{post.subtitle}}</p>
+                    <p class="card-text"><small class="text-muted">{{post.date}}</small></p>
+                    <!-- Aggiungere un if a questo div per mostrarlo solo se loggato.
+                    In alternativa si potrebbe fare che quando non si Ã¨ loggati si rimanda alla pagina di Login. -->
+                    <div class="text-end">
+                        <a class="btn btn-dark bg-gradient m-3" title="Dettagli" [routerLink]="['/posts/', post.id]"><i class="bi bi-menu-up"></i> Read more</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div *ngIf="logged" class="text-center">
+        <a class="btn btn-primary my-4" [routerLink]="['/new-post']">Create new post</a>
+    </div>
+
+    <pagination-controls class="text-center" (pageChange)="page = $event"></pagination-controls>
+</div>
+
+<app-footer></app-footer>

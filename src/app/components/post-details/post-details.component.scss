@@ -1,0 +1,34 @@
+.details-img {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100vh;
+}
+
+.social {
+    background-color: #9396a0;
+    border: none;
+    transition: all .3s ease-in-out;
+}
+
+#facebook:hover {
+    background-color: #3B5998;
+    transform: translateX(5px);
+}
+
+#twitter:hover {
+    background-color: #1DA1F2;
+    transform: translateX(5px);
+}
+
+#pinterest:hover {
+    background-color: #BD081C;
+    transform: translateX(5px);
+}
+
+@media screen and (min-width: 992px) {
+    #body-details {
+        width: 60vw;
+    }
+}

@@ -1,0 +1,42 @@
+<app-navbar></app-navbar>
+<!-- Sezione immagine con titolo -->
+<div class="">
+<div class="card text-bg-dark border-0">
+  <div class="details-img bg-img" style="background: url('{{ p?.image }}') center / cover no-repeat fixed; filter: brightness(0.8);">
+</div>
+  <div class="card-img-overlay d-flex flex-column justify-content-center align-items-center">
+    <h1 class="card-title display-1 text-light fw-bold text-center">{{p?.title | uppercase}}</h1>
+    <h2 class="card-text text-center">{{p?.subtitle}}</h2>
+  </div>
+</div>
+</div>
+
+<div class="container" id="body-details">
+    <!-- Sezione Post -->
+    <div class="pb-5">
+        <div class="float-start text-center w-25 mb-2 me-3 py-5 px-3" style="border: 1px solid #F96E46;">
+            <div class="me-3">
+                <img class="rounded-circle" src="{{p?.authorImage}}" width="50" height="50" alt="Profile pic">
+            </div>
+            <p class="fst-italic my-3">Author: {{ p?.author }}</p>
+            <p class="fst-italic my-3">Date: {{ p?.date }}</p>
+        </div>
+        <p class="my-5">{{ p?.body }}</p>
+        <div class="text-end" *ngIf="owner">
+          <a class="btn btn-dark bg-gradient m-3" [routerLink]="['/posts/' + p!.id + '/edit/']"><i class="bi bi-pencil-square"></i></a>
+          <a type="button" class="btn btn-dark bg-gradient m-3" (click)="deletePost(p!.id)"><i class="bi bi-trash3"></i></a>
+        </div>
+        <a class="text-decoration-none back" [routerLink]="['/']" title="Back"><i class="bi bi-caret-left-fill"></i> Back</a>
+    </div>
+
+    <!-- Sezione tasti social -->
+    <div class="text-center pb-5">
+        <a class="btn text-light mx-2 w-25 social" href="https://www.facebook.com/" title="Facebook" id="facebook"><i class="bi bi-facebook"></i> Share</a>
+        <a class="btn text-light mx-2 w-25 social" href="https://twitter.com/" title="Twitter" id="twitter"><i class="bi bi-twitter"></i> Tweet</a>
+        <a class="btn text-light mx-2 w-25 social" href="https://www.pinterest.it/" title="Pinterest" id="pinterest"><i class="bi bi-pinterest"></i> Pin</a>
+    </div>
+
+    <!-- Sezione Commenti -->
+    <app-comments></app-comments>
+</div>
+<app-footer></app-footer>

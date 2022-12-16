@@ -1,0 +1,46 @@
+<app-navbar></app-navbar>
+
+<div class="container-fluid my-5" id="lastArticles">
+  <div class="d-flex justify-content-center align-items-center my-3">
+    <h1 class="me-3">Latest Articles</h1>
+    <div style="width: 900px; border-bottom: 5px solid #545863"></div>
+  </div>
+
+  <div class="row text-center my-3">
+    <!-- Sezione Ultimi articoli -->
+    <div class="col-lg-6 g-0" *ngFor="let post of lastPost">
+      <a [routerLink]="['/posts/', post.id]">
+        <div class="d-flex justify-content-center align-items-center text-light" id="last"
+          style="background: url('{{ post.cover }}') center / cover no-repeat;">
+          <div>
+            <p>{{ post.author }} {{ post.date }}</p>
+            <p class="h3">{{ post.title }}</p>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <!-- Sezione 4 Ultimi Articoli -->
+    <div class="col-lg-6">
+      <div class="row">
+        <div class="col-md-6 g-0" *ngFor="let post of notLastPosts">
+          <a [routerLink]="['/posts/', post.id]">
+            <div class="d-flex justify-content-center align-items-center text-light" id="fourPosts" style="background: url('{{post.image}}') center / cover no-repeat;">
+              <div>
+                <p>{{ post.author }} {{ post.date }}</p>
+                <p class="h3">{{ post.title }}</p>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <app-filtered-pc></app-filtered-pc>
+  <app-filtered-playstation></app-filtered-playstation>
+  <app-filtered-nintendo></app-filtered-nintendo>
+  <app-filtered-xbox></app-filtered-xbox>
+</div>
+
+<app-footer></app-footer>

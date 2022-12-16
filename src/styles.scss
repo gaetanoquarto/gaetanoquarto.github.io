@@ -1,0 +1,49 @@
+h1 {
+    color: #545863;
+}
+
+input:active, input:focus, textarea:active, textarea:focus, select:active, select:focus {
+    border: 1px solid #F96E46 !important;
+    box-shadow: 0px 0px 10px #F96E46 !important;
+}
+
+.back {
+    color: #545863;
+    transition: all .3s ease-in-out;
+    &:hover {
+        color: #F96E46;
+    }
+}
+
+.btn {
+    background-color: #F96E46;
+    border: 1px solid #F96E46;
+    transition: all .3s ease-in-out;
+    &:hover {
+        background-color: #e14920;
+        border: 1px solid #e14920;
+        transform: translateX(5px);
+    }
+}
+
+.ngx-pagination .current {
+    background: #F96E46 !important;
+}
+
+.first-div {
+    background-image: url('https://images.pexels.com/photos/7241440/pexels-photo-7241440.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+    height: 60vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: transform 0.3s ease-in-out;
+    &:hover {
+        transform:  scale(1.01);
+    }
+}
+
+
+
+.container100 {
+  height: 100vh;
+}

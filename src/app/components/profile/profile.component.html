@@ -1,0 +1,24 @@
+<app-navbar></app-navbar>
+
+<div class="container my-5">
+  <a class="text-decoration-none back" [routerLink]="['/']" title="Back">
+    <i class="bi bi-caret-left-fill"></i>Back
+  </a>
+
+  <div class="container text-center">
+    <h1 class="my-5">Profile</h1>
+    <div (mouseenter)="showIcon = true" (mouseleave)="showIcon = false" class="d-inline-block position-relative mb-3">
+      <img src="{{ userData.image }}" class="rounded-circle" alt="Profile pic" width="150px" height="150px">
+      <i *ngIf="showIcon" (click)="showInput = true" class="bi h1 position-absolute modifyIcon bi-pencil-square"></i>
+    </div>
+    <form *ngIf="showInput" #form="ngForm" class="d-flex mb-3" (ngSubmit)="updateImg(form)">
+      <input type="text" class="form-control" [ngModel]="userData.image" id="image" name="image" #image="ngModel">
+      <button type="submit" class="btn mx-2 text-white"><i class="bi bi-check2"></i></button>
+    </form>
+
+    <p class="display-5 fw-semibold">Name: {{userData.name}}</p>
+    <p class="h5">Email: {{userData.email}}</p>
+  </div>
+</div>
+
+<app-footer></app-footer>
